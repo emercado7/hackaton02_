@@ -1,6 +1,7 @@
 package mx.hackaton02;
 
 import mx.hackaton02.pages.WelcomeScreen;
+
 import javax.swing.*;
 
 // --- CLASE 1: EL LANZADOR (Main) ---
