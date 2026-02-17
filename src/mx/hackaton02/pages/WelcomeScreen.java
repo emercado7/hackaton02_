@@ -1,5 +1,7 @@
 package mx.hackaton02.pages;
 
+import mx.hackaton02.models.ContactList;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -47,7 +49,7 @@ public class WelcomeScreen extends JFrame {
         btnStart.addActionListener(e -> {
             // 1. Obtener el valor del spinner
             int size = (Integer) numberSpinner.getValue();
-
+            ContactList miAgenda =  new ContactList(size);
             // 2. Cerrar esta ventana de bienvenida
             dispose();
 

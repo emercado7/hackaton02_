@@ -2,10 +2,10 @@ package mx.hackaton02.pages;
 
 import javax.swing.*;
 import java.awt.*;
-
+// import ;
 
 // --- CLASE 2: PANTALLA DE BIENVENIDA ---
-public class AddContact extends JFrame {
+public class ContactForm extends JFrame {
 
     private JTextField nameField, numberField;
 
@@ -18,7 +18,7 @@ public class AddContact extends JFrame {
             "+57 (Colombia)"
     };
 
-    public AddContact() {
+    public ContactForm() {
         setTitle("Añadir Contacto");
         setSize(400, 250);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -66,8 +66,6 @@ public class AddContact extends JFrame {
         contactPanel.add(row2);
         contactPanel.add(row3);
 
-        // Usamos JSpinner en lugar de TextField para forzar números
-
         add(contactPanel, BorderLayout.CENTER);
 
         // Botón de Inicio
@@ -80,7 +78,16 @@ public class AddContact extends JFrame {
 
         // Lógica del botón
         btnStart.addActionListener(e -> {
-            int name = nameField.getColumns();
+            String name = nameField.getText().trim();
+            String number = numberField.getText().trim();
+
+            if (name.isEmpty()) {
+                //showMessage("Please enter a name.");
+                return;
+            }
+
+
+
 
             dispose();
         });
